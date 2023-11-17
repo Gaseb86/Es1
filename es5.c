@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    char *currentd = getwd(currentd);
+    char *currentd = getcwd(currentd, MAXPATHLEN);
 
     printf(" %s:~%s $ ", username, currentd);
     char *userInput = malloc(256);
@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
     else
     {
     }
-    int *test = malloc(500 * 4);
-    test = NULL;
+    free(userInput);
     return 0;
 }
